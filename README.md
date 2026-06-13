@@ -58,7 +58,7 @@ Toast notifications are implemented to provide immediate feedback for user actio
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/AliEnsafi/learning-course-project
 ```
 
 Install dependencies:
