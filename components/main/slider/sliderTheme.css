@@ -1,0 +1,10 @@
+
+.slider-img {
+    animation-name: slider-img;
+    animation-duration: 4s;
+}
+
+@keyframes slider-img {
+    from { opacity: 0; }
+    to { opacity: 100;}
+}
