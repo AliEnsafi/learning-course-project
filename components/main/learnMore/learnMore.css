@@ -1,0 +1,10 @@
+
+.learnmore-img {
+    animation-name: learn-img;
+    animation-duration: 4s;
+}
+
+@keyframes learn-img {
+    from { opacity: 0; }
+    to { opacity: 100;}
+}

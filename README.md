@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Learning Project
 
-## Getting Started
+A modern online course sales platform built with Next.js, React, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Overview
+
+Learning Project is a frontend web application designed for browsing and purchasing educational courses. The project demonstrates modern React development practices, form handling, validation, responsive design, and reusable component architecture.
+
+The app includes user authentication pages (registration and login), courses, blog, about us, contact us, and a clean user experience built with modern frontend technologies.
+
+## Features
+
+* User Registration Form
+* User Login Form
+* Client-side Form Validation
+* Responsive Design
+* Reusable UI Components
+* Toast Notifications
+* Type-safe Development
+* Modern Project Structure
+
+## Tech Stack
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* Formik
+* Yup
+* React Toastify
+* React Icon
+* Embla Carousel
+
+## Technical Highlights
+
+### Form Management
+
+Forms are implemented using Formik to provide a scalable and maintainable approach to handling user input and form state.
+
+### Validation
+
+Yup is used for schema-based validation to ensure data consistency and improve user experience.
+
+### Type Safety
+
+TypeScript is used throughout the project to reduce runtime errors and improve code maintainability.
+
+### Styling
+
+Tailwind CSS is used to build responsive and consistent user interfaces with a utility-first approach.
+
+### User Feedback
+
+Toast notifications are implemented to provide immediate feedback for user actions and validation results.
+
+## Project Structure
+
+```text
+src/
+├── app/
+├── components/
+├── hooks/
+├── services/
+├── types/
+├── utils/
+└── styles/
+```
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Production Build
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Screenshots
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Add screenshots of:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* Home Page
+* Login Page
+* Registration Page
+* Course Listing Page
 
-## Deploy on Vercel
+## Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ali Ensafi
+Frontend Developer
