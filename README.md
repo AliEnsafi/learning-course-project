@@ -2,7 +2,6 @@
 
 A modern online course sales platform built with Next.js, React, TypeScript, and Tailwind CSS.
 
-<<<<<<< HEAD
 =======
 Demo: https://learning-course-project.vercel.app/
 
