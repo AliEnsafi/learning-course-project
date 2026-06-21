@@ -75,7 +75,7 @@ src/
 Clone the repository:
 
 ```bash
-<<<<<<< HEAD
+
 git clone <repository-url>
 =======
 git clone https://github.com/AliEnsafi/learning-course-project
@@ -137,4 +137,5 @@ Add screenshots of:
 ## Author
 
 Ali Ensafi
+
 Frontend Developer
