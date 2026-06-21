@@ -2,7 +2,7 @@
 
 A modern online course sales platform built with Next.js, React, TypeScript, and Tailwind CSS.
 
-=======
+
 Demo: https://learning-course-project.vercel.app/
 
 ## Overview
@@ -56,7 +56,7 @@ Tailwind CSS is used to build responsive and consistent user interfaces with a u
 
 Toast notifications are implemented to provide immediate feedback for user actions and validation results.
 
-<<<<<<< HEAD
+
 ## Project Structure
 
 ```text
@@ -69,8 +69,6 @@ src/
 ├── utils/
 └── styles/
 ```
-
-=======
 
 ## Installation
 
@@ -111,7 +109,6 @@ npm start
 
 ## Screenshots
 
-<<<<<<< HEAD
 Add screenshots of:
 
 * Home Page
@@ -121,7 +118,6 @@ Add screenshots of:
 
 ## Author
 
-=======
 * Home Page
 
 ![Home](./public/Images/screenshots/main.png)
@@ -140,6 +136,5 @@ Add screenshots of:
 
 ## Author
 
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 Ali Ensafi
 Frontend Developer
