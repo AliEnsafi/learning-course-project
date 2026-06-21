@@ -9,9 +9,27 @@ import { FaUser, FaRegClock } from "react-icons/fa";
 import Link from "next/link";
 
 
+<<<<<<< HEAD
 const CourseCardTheme = (props : any) => {
 
     const {  imageUrl , title , author , time , price , slug } = props
+=======
+type cardProps = {
+
+    image : string | StaticImageData,
+    title: string,
+    author: string,
+    time: string,
+    price: string,
+    slug: string
+
+}
+
+
+const CourseCardTheme: React.FC<cardProps> = (props) => {
+
+    const {  image , title , author , time , price , slug } = props
+>>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 
 
   return (
@@ -19,10 +37,17 @@ const CourseCardTheme = (props : any) => {
       <article className="border border-slate-200 rounded-md shadow-sm m-2 text-sm cursor-pointer">
 
         <Link href={`/courses/${slug}`}>
+<<<<<<< HEAD
           <Image src={imageUrl} alt="aspNET" className="w-full" width={500} height={300} />
           <div className="py-5 px-3 space-y-4">
             <p>{title}</p>
             <div className="border-b-2 border-b-slate-200 py-3 flex space-x-2">
+=======
+          <Image src={image} alt="aspNET" className="w-full" />
+          <div className=" py-5 px-3 space-y-4">
+            <p>{title}</p>
+            <div className="border-b-2 border-b-slate-200 pb-3 flex space-x-2">
+>>>>>>> e26db95ebb988e32ae61777779c340facb95326c
               <div className="text-slate-300">
                 <FaUser />
               </div>

@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 
 import { supabase } from "@/lib/supabase"
+=======
+import React from "react"
+
+import { data } from "./data"
+>>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 import ArticleTheme from "./articleTheme"
 
 import { FaRegClone } from "react-icons/fa"
@@ -7,11 +13,16 @@ import Link from "next/link"
 
 
 
+<<<<<<< HEAD
 async function Article () {
 
     const { data , error } = await supabase.from("blogs").select("*").order("created_at", { ascending: false }).limit(3)
 
     if (error) { return <div>داده‌ای پیدا نشد! </div> }
+=======
+
+const Article : React.FC = () => {
+>>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 
     return(
 
@@ -29,12 +40,21 @@ async function Article () {
 
                 <div className="flex flex-wrap justify-center items-center space-y-10 lg:space-y-0">
                     {
+<<<<<<< HEAD
                         data?.map((item) => {
 
                             const { id , imageUrl , title , description , writer , views , comments , slug} = item
 
                             return <ArticleTheme key={id} image={imageUrl} title={title} description={description} slug={slug}
                                                  writer={writer} views={views} comments={comments} />
+=======
+                        data.map((item) : any => {
+
+                            const { id , image , title , description , writer , category , views , comments , slug} = item
+
+                            return <ArticleTheme key={id} image={image} title={title} description={description} slug={slug}
+                                                 writer={writer} category={category} views={views} comments={comments} />
+>>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 
                         })
                     }

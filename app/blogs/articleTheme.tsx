@@ -1,16 +1,28 @@
+<<<<<<< HEAD
 import Image, { StaticImageData } from "next/image"
 import Link from "next/link"
 
 import { supabase } from "@/lib/supabase"
+=======
+import React from "react"
+import Image from "next/image"
+import Link from "next/link"
+
+import { articleData } from "./data"
+>>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 
 import { FaEye , FaRegCommentAlt , FaUser} from "react-icons/fa"
 
 
+<<<<<<< HEAD
 async function ArticleTheme () {
 
     const { data , error } = await supabase.from("blogs").select("*")
 
     if (error) return <div>خطایی رخ داد!</div>
+=======
+const ArticleTheme :React.FC = () => {
+>>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 
     return(
 
@@ -19,9 +31,15 @@ async function ArticleTheme () {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 w-4/5">
             {
+<<<<<<< HEAD
                 data?.map((item) => {
 
                     const { id , imageUrl , title , description , writer , views , comments , slug } = item
+=======
+                articleData.map((item) : any => {
+
+                    const { id , image , title , description , writer , views , comments , slug } = item
+>>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 
                     return(
 
@@ -29,7 +47,11 @@ async function ArticleTheme () {
 
                         <article className="border border-slate-200 rounded-md shadow-sm w-full cursor-pointer">
 
+<<<<<<< HEAD
                             <Image src={imageUrl} alt="image" width={500} height={300} />
+=======
+                            <Image src={image} alt="image" className="min-w-full" />
+>>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 
                             <div className="p-5 h-28">
                                 <Link key={id} href={`/blogs/${slug}`}>

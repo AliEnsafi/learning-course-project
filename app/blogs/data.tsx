@@ -6,7 +6,11 @@ import techTrend from './../../public/Images/new/technology.jpg'
 import matlab from './../../public/Images/new/matlab.jpg'
 import seoProgram from './../../public/Images/new/seo.jpg'
 import Typescript from './../../public/Images/new/type.jpg'
+<<<<<<< HEAD
 import Api from './../../public/Images/new/api.jpg'
+=======
+import Api from './../../public/Images/new/seo.jpg'
+>>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 import top10Language from './../../public/Images/new/program-language.jpg'
 
 

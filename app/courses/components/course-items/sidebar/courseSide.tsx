@@ -54,11 +54,19 @@ const CourseSide : React.FC<SidebarFilterProps> = ({ filter , setFilter }) => {
 
                     {
                         buttonfilters.map(item => {
+<<<<<<< HEAD
                             const { id, label , value } = item
 
                             return(
 
                             <label key={id} className="flex items-start cursor-pointer">
+=======
+                            const { label , value } = item
+
+                            return(
+
+                            <label className="flex items-start cursor-pointer">
+>>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 
                                 <input type="checkbox" className="hidden peer"/>
                                 <span className={btnStyles(activeFilter === `${value}`)}

@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 
+=======
+import { StaticImageData } from "next/image"
+import React from "react"
+>>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 import Image from "next/image"
 
 import { FaUser , FaSignal , FaClock , FaAward , FaBookReader , FaRegQuestionCircle } from "react-icons/fa"
 
 
+<<<<<<< HEAD
 const SingleCourseSide = (props : any) => {
 
     const {key , imageUrl , author , price , time , level } = props
@@ -12,11 +18,35 @@ const SingleCourseSide = (props : any) => {
         <>
         <section key={key} className="border border-gray-200 px-10 py-5 rounded-md space-y-10 w-96">
             <div className="flex-col space-y-6 items-center justify-center">
+=======
+interface props {
+
+    key: number
+    image: StaticImageData,
+    author: string,
+    price: string,
+    time: string,
+    level: string
+}
+
+const SingleCourseSide : React.FC<props> = (props) => {
+
+    const { key , image , author , price , time , level } = props
+
+    return(
+        <>
+        <section className="border border-gray-200 px-10 py-5 rounded-md space-y-10 w-96">
+            <div key={key} className="flex-col space-y-6 items-center justify-center">
+>>>>>>> e26db95ebb988e32ae61777779c340facb95326c
                 <div>
                     <h2 className="courseside-title text-xl text-center font-bold">اطلاعات دوره</h2>
                 </div>
                 <div className="courseside-img rounded">
+<<<<<<< HEAD
                     <Image src={imageUrl} alt={price} width={300} height={180} />
+=======
+                    <Image src={image} alt={price} width={300} height={180} />
+>>>>>>> e26db95ebb988e32ae61777779c340facb95326c
                 </div>
                 <div className="font-semibold text-violet-700 text-center">
                     {price}
