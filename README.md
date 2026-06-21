@@ -5,7 +5,6 @@ A modern online course sales platform built with Next.js, React, TypeScript, and
 =======
 Demo: https://learning-course-project.vercel.app/
 
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 ## Overview
 
 Learning Project is a frontend web application designed for browsing and purchasing educational courses. The project demonstrates modern React development practices, form handling, validation, responsive design, and reusable component architecture.
@@ -72,7 +71,7 @@ src/
 ```
 
 =======
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
+
 ## Installation
 
 Clone the repository:
@@ -82,7 +81,7 @@ Clone the repository:
 git clone <repository-url>
 =======
 git clone https://github.com/AliEnsafi/learning-course-project
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
+
 ```
 
 Install dependencies:
