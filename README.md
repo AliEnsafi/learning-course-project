@@ -2,11 +2,9 @@
 
 A modern online course sales platform built with Next.js, React, TypeScript, and Tailwind CSS.
 
-<<<<<<< HEAD
-=======
+
 Demo: https://learning-course-project.vercel.app/
 
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 ## Overview
 
 Learning Project is a frontend web application designed for browsing and purchasing educational courses. The project demonstrates modern React development practices, form handling, validation, responsive design, and reusable component architecture.
@@ -58,7 +56,7 @@ Tailwind CSS is used to build responsive and consistent user interfaces with a u
 
 Toast notifications are implemented to provide immediate feedback for user actions and validation results.
 
-<<<<<<< HEAD
+
 ## Project Structure
 
 ```text
@@ -72,18 +70,16 @@ src/
 └── styles/
 ```
 
-=======
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 ## Installation
 
 Clone the repository:
 
 ```bash
-<<<<<<< HEAD
+
 git clone <repository-url>
-=======
+
 git clone https://github.com/AliEnsafi/learning-course-project
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
+
 ```
 
 Install dependencies:
@@ -113,7 +109,6 @@ npm start
 
 ## Screenshots
 
-<<<<<<< HEAD
 Add screenshots of:
 
 * Home Page
@@ -123,7 +118,6 @@ Add screenshots of:
 
 ## Author
 
-=======
 * Home Page
 
 ![Home](./public/Images/screenshots/main.png)
@@ -142,6 +136,6 @@ Add screenshots of:
 
 ## Author
 
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 Ali Ensafi
+
 Frontend Developer
