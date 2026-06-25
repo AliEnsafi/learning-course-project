@@ -4,7 +4,6 @@ import Breadcrumb from "../breadCrumb"
 
 import { FaUserTie } from "react-icons/fa"
 
-<<<<<<< HEAD
 
 const SingleCourseMain = (props : any) => {
 
@@ -15,25 +14,6 @@ const SingleCourseMain = (props : any) => {
             <Breadcrumb />
 
             <div className="flex-col space-y-8 mt-5">
-=======
-interface props {
-
-    key : number
-    title: string,
-    author: string
-}
-
-
-const SingleCourseMain : React.FC<props> = (props) => {
-
-    const { key , title , author } = props
-
-    return(
-        <section className="w-full lg:w-4/5">
-            <Breadcrumb />
-
-            <div key={key} className="flex-col space-y-8 mt-5">
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
                 <h2 className="text-2xl"> {title} </h2>
                 <div className="flex space-x-3 text-gray-500 text-xl">
                     <FaUserTie />

@@ -2,25 +2,10 @@ import Image, { StaticImageData } from "next/image"
 
 import { FaTelegram , FaInstagram , FaYoutube , FaTwitter } from "react-icons/fa"
 
-<<<<<<< HEAD
 
 const SingleBlogTheme = ( {blog} : any ) => {
 
   const { title , imageUrl } = blog
-=======
-import { articleDataProps } from "../data"
-
-
-interface SingleBlogThemeProps {
-  blog: articleDataProps
-
-}
-
-
-const SingleBlogTheme = ( {blog} : SingleBlogThemeProps ) => {
-
-  const { title , image } = blog
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 
     return(
 
@@ -32,11 +17,7 @@ const SingleBlogTheme = ( {blog} : SingleBlogThemeProps ) => {
                         <h2 className="text-xl font-bold"> {title} </h2>
                     </div>
                     <div className="blog-img">
-<<<<<<< HEAD
                       <Image src={imageUrl} alt={title} width={500} height={300} />
-=======
-                      <Image src={image} alt={title} />
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
                     </div>
                     <div className="blog-desc">
                         <p className="font-extralight opacity-55 text-justify">

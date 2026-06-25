@@ -25,11 +25,7 @@ const WhyUs : React.FC = () => {
 
                             const {id , title , description} = item
 
-<<<<<<< HEAD
                             return <WhyUsTheme key={id} id={id} title={title} description={description} />
-=======
-                            return <WhyUsTheme id={id} title={title} description={description} />
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
                         })
                     }
                 </div>

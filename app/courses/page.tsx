@@ -7,7 +7,6 @@ import CourseCategory from "./components/category/courseCategory"
 import CourseItems from "./components/course-items/courseItems"
 
 
-
 export default function Courses() {
 
     return(
@@ -20,8 +19,6 @@ export default function Courses() {
         <CourseCategory />
 
         <CourseItems />
-
-
 
         <Footer />
         </>

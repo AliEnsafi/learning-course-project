@@ -18,11 +18,7 @@ const ArticleTheme = (props : any) => {
         <Link href={`/blogs/${slug}`}>
             <article className="border border-slate-200 rounded-md shadow-sm m-2">
 
-<<<<<<< HEAD
                 <Image src={image} alt="pic1" width={500} height={300} />
-=======
-                <Image src={image} alt="pic1" />
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 
                 <div className="p-5 h-28">
                     <h3 className="mb-3 text-slate-900 text-sm hover:text-violet-700 transition-colors cursor-pointer">{title}</h3>

@@ -6,8 +6,13 @@ import * as Yup from 'yup';
 const validationSchema = Yup.object().shape({
 
     email: Yup.string().email("فرمت ایمیل صحیح نیست").required("وارد کردن ایمیل الزامی است"),
-    password: Yup.string().min(8, "رمز عبور باید حداقل 8 کاراکتر باشد").required("لطفا رمز عبور را وارد کنید"),
-    confirmPassword: Yup.string().oneOf([Yup.ref('password')] , "مقدار وارد شده با رمز عبور مطابقت ندارد").required("لطفا مجدداً رمز عبور را وارد کنید")
+    password: Yup.string().min(8, "رمز عبور باید حداقل 8 کاراکتر باشد").required("لطفا رمز عبور را وارد کنید")
+                  .matches(/[A-Za-z]/, "رمز عبور باید شامل حداقل یک حرف باشد")
+                  .matches(/\d/, "رمز عبور باید شامل حداقل یک عدد باشد")
+                  .matches(/[@$!%*?&#^()_\-+=<>]/, "رمز عبور باید شامل حداقل یک علامت باشد"),
+
+    confirmPassword: Yup.string().oneOf([Yup.ref('password')] , "مقدار وارد شده با رمز عبور مطابقت ندارد")
+                        .required("لطفا مجدداً رمز عبور را وارد کنید")
 
 })
 

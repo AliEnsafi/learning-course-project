@@ -19,11 +19,7 @@ const CardTheme: React.FC<dataItemsProps> = (props) => {
       <div key={id} className="w-full md:w-1/3 lg:w-1/4">
       <Link href={`/courses/${slug}`}>
           <article className="border ml-10 md:ml-0 border-slate-200 rounded-md shadow-sm text-sm cursor-pointer">
-<<<<<<< HEAD
           <Image src={image} alt="image" width={500} height={300} />
-=======
-          <Image src={image} alt="image" />
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 
           <div className="py-5 px-3 space-y-4">
             <p className="text-lg hover:text-violet-700 transition-colors">{title}</p>

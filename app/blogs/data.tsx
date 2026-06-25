@@ -6,11 +6,7 @@ import techTrend from './../../public/Images/new/technology.jpg'
 import matlab from './../../public/Images/new/matlab.jpg'
 import seoProgram from './../../public/Images/new/seo.jpg'
 import Typescript from './../../public/Images/new/type.jpg'
-<<<<<<< HEAD
 import Api from './../../public/Images/new/api.jpg'
-=======
-import Api from './../../public/Images/new/seo.jpg'
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 import top10Language from './../../public/Images/new/program-language.jpg'
 
 
@@ -27,6 +23,19 @@ export interface articleDataProps {
     comments: number
 
 }
+
+export interface Article {
+
+  id: string
+  title: string
+  slug: string
+  description: string | null
+  imageUrl: string
+  views: number
+  comments: number
+  writer: string
+}
+
 
 export const articleData : articleDataProps[] = [
 

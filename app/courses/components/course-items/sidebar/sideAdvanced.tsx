@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import { date } from "yup"
-=======
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 import { sideAdvanced } from "./data"
 
 
@@ -21,27 +18,16 @@ const SideAdvancedTheme = () => {
 
                         {
                             sideAdvanced.map((item) : any => {
-<<<<<<< HEAD
                                 const { id , title } = item
 
                                 return(
 
                                     <label key={id} className="flex items-start cursor-pointer">
-=======
-
-                                return(
-
-                                    <label className="flex items-start cursor-pointer">
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
                                         <input type="checkbox" className="hidden peer"/>
                                         <span className="w-60 py-2 rounded-lg border border-gray-300 bg-gray-50 text-gray-700 font-medium
                                                     hover:bg-violet-600 hover:text-white transition-colors has-checked:bg-blue-600
                                                     has-checked:text-white has-checked:border-blue-600 text-center">
-<<<<<<< HEAD
                                                         {title}
-=======
-                                                        {item}
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
                                                     </span>
                                     </label>
 

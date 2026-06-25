@@ -1,104 +1,59 @@
-<<<<<<< HEAD
-import Image, { StaticImageData } from "next/image"
-import Link from "next/link"
+"use client";
 
+import { useEffect, useState, useMemo } from "react"
 import { supabase } from "@/lib/supabase"
-=======
-import React from "react"
-import Image from "next/image"
-import Link from "next/link"
+import ArticleSearch from "./articleSearch"
+import ArticleList from "./articleList"
+import { Article } from "./data"
 
-import { articleData } from "./data"
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
+export default function ArticleTheme() {
 
-import { FaEye , FaRegCommentAlt , FaUser} from "react-icons/fa"
+  const [articles, setArticles] = useState<Article[]>([])
+  const [searchQuery, setSearchQuery] = useState("")
+  const [loading, setLoading] = useState(true)
 
+  useEffect(() => {
 
-<<<<<<< HEAD
-async function ArticleTheme () {
+    const fetchArticles = async () => {
+      try {
+        const { data, error } = await supabase.from("blogs").select("*");
+        if (!error && data) {
+          setArticles(data);
+        }
+      } catch (error) {
+        console.error("Error fetching articles:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    const { data , error } = await supabase.from("blogs").select("*")
+    fetchArticles()
+  }, [])
 
-    if (error) return <div>خطایی رخ داد!</div>
-=======
-const ArticleTheme :React.FC = () => {
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
+  const filteredArticles = useMemo(() => {
 
-    return(
-
-        <>
-        <div className="container w-full flex justify-center items-center mt-10">
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 w-4/5">
-            {
-<<<<<<< HEAD
-                data?.map((item) => {
-
-                    const { id , imageUrl , title , description , writer , views , comments , slug } = item
-=======
-                articleData.map((item) : any => {
-
-                    const { id , image , title , description , writer , views , comments , slug } = item
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
-
-                    return(
-
-                    <div key={id} className="article-theme">
-
-                        <article className="border border-slate-200 rounded-md shadow-sm w-full cursor-pointer">
-
-<<<<<<< HEAD
-                            <Image src={imageUrl} alt="image" width={500} height={300} />
-=======
-                            <Image src={image} alt="image" className="min-w-full" />
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
-
-                            <div className="p-5 h-28">
-                                <Link key={id} href={`/blogs/${slug}`}>
-                                    <h3 className="mb-3 text-slate-900 text-sm hover:text-violet-800 ">{title}</h3>
-                                    <p className="text-sm text-slate-500 leading-relaxed">{description}</p>
-                                </Link>
-                            </div>
-
-                            <footer className="p-5 border-t mt-7 border-slate-200 flex justify-between">
-
-                                <section className="flex space-x-5">
-                                    <div className="flex items-center text-sm text-slate-700 space-x-2 ">
-                                        <div className="text-sm text-slate-300"> <FaEye /> </div>
-                                        <p className="mt-0.5">{views}</p>
-                                    </div>
-                                    <div className="flex items-center text-sm text-slate-700 space-x-2">
-                                        <div className="text-sm text-slate-300"> <FaRegCommentAlt /> </div>
-                                        <p className="mt-0.5">{comments}</p>
-
-                                    </div>
-                                </section>
-                                <section>
-                                    <div className="flex items-center space-x-2">
-                                        <div className="text-sm text-sky-300">
-                                            <FaUser  />
-                                        </div>
-                                        <p className="text-sky-500 text-sm font-light mt-0.5">{writer}</p>
-                                    </div>
-                                </section>
-
-                          </footer>
-
-                        </article>
-
-                    </div>
-
-                    )
-
-                } )
-            }
-        </div>
-
-        </div>
-
-        </>
-
+    return articles.filter((item) =>
+      item.title?.toLowerCase().includes(searchQuery.toLowerCase().trim())
     )
-}
+  }, [articles, searchQuery])
 
-export default ArticleTheme
+  return (
+
+    <div className="container w-full flex flex-col items-center mt-10">
+      <div className="w-4/5 mb-8">
+
+        <ArticleSearch
+          items={articles}
+          onQueryChange={(q) => setSearchQuery(q)}
+        />
+
+      </div>
+
+      <div className="w-4/5">
+
+        <ArticleList articles={filteredArticles} loading={loading} />
+
+      </div>
+    </div>
+  );
+}

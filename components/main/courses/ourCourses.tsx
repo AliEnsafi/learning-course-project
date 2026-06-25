@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { data } from "./data"
 import { supabase } from "@/lib/supabase"
@@ -13,18 +12,6 @@ async function OurCourses () {
   const { data , error } = await supabase.from("courses").select("*").order("created_at", { ascending: false }).limit(3)
 
   if (error) { return <div>داده‌ای پیدا نشد! </div> }
-=======
-import React from "react";
-
-import { data } from "./data";
-
-import { FaAngleLeft } from "react-icons/fa";
-
-import CardTheme from "./cardTheme";
-import Link from "next/link"
-
-const OurCourses: React.FC = () => {
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
 
   return (
     <>
@@ -57,7 +44,6 @@ const OurCourses: React.FC = () => {
         <div className="courses-item">
           <div className="flex flex-wrap md:justify-around lg:justify-center md:space-x-4 space-y-5 lg:space-y-0 mr-5 lg:mr-0">
             {data.map((item) => {
-<<<<<<< HEAD
               const { id, imageUrl, title, description, level, pricedisplay , slug } = item;
 
               return (
@@ -69,18 +55,6 @@ const OurCourses: React.FC = () => {
                   description={description}
                   level={level}
                   price={pricedisplay}
-=======
-              const { id, image, title, description, level, price , slug } = item;
-
-              return (
-                <CardTheme
-                  id={id}
-                  image={image}
-                  title={title}
-                  description={description}
-                  level={level}
-                  price={price}
->>>>>>> e26db95ebb988e32ae61777779c340facb95326c
                   slug={slug}
                 />
               )
