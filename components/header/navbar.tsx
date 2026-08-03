@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 import { FaRegFile } from "react-icons/fa"
 
 import Image from "next/image"
-import navImage from "./../../public/Images/logo-academy.png"
+import navImage from "./../../public/Images/academy-logo-mark-light.png"
 
 import Link from "next/link"
 import NavbarLinks from "./navbarLinks"
@@ -64,7 +64,7 @@ const Navbar: React.FC = (props) => {
           <HambergerBtn isOpen={isOpen} toggle={toggleMenu} />
 
           <div className="nav-img cursor-pointer z-50">
-            <Image src={navImage} alt="navImage" />
+            <Image src={navImage} alt="navImage" width={48} height={40} />
           </div>
 
           <NavbarLinks isOpen={isOpen} />

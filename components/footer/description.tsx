@@ -1,7 +1,7 @@
 import React from "react"
 
 import Image from "next/image"
-import logo from './../../public/Images/logo-academy.png'
+import logo from './../../public/Images/academy-logo-mark-light.png'
 
 import { FaTelegram , FaInstagram , FaYoutube , FaTwitter } from "react-icons/fa"
 import Link from "next/link"
@@ -14,8 +14,9 @@ const Description : React.FC = () => {
         <>
                 <div className="about-us space-y-8 w-full lg:w-1/3">
 
-                    <div className="logo">
-                        <Image src={logo} alt="logo" />
+                    <div className="logo flex space-x-1 items-center">
+                        <Image src={logo} alt="logo" width={40} />
+                        <h2 className="mt-1">آکادمی ما</h2>
                     </div>
 
                     <div className="social-accounts flex justify-start text-lg mr-1.5 space-x-3 text-violet-950 dark:text-violet-300">
