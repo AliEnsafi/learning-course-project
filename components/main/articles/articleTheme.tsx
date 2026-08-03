@@ -16,24 +16,24 @@ const ArticleTheme = (props : any) => {
     <div key={id} className="md:w-1/2 lg:w-1/4 space-x-3">
 
         <Link href={`/blogs/${slug}`}>
-            <article className="border border-slate-200 rounded-md shadow-sm m-2">
+            <article className="border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-md shadow-sm dark:shadow-gray-800 m-2">
 
                 <Image src={image} alt="pic1" width={500} height={300} />
 
                 <div className="p-5 h-28">
-                    <h3 className="mb-3 text-slate-900 text-sm hover:text-violet-700 transition-colors cursor-pointer">{title}</h3>
-                    <p className="text-sm text-slate-600">{description}</p>
+                    <h3 className="mb-3 text-slate-900 dark:text-slate-100 text-sm hover:text-violet-700 dark:hover:text-violet-400 transition-colors cursor-pointer">{title}</h3>
+                    <p className="text-sm text-slate-600 dark:text-slate-400">{description}</p>
                 </div>
 
-                <footer className="p-5 border-t border-slate-200 flex justify-between">
+                <footer className="p-5 border-t border-slate-200 dark:border-gray-700 flex justify-between">
 
                     <section className="flex space-x-5">
-                        <div className="flex items-center text-sm text-slate-700 space-x-2 ">
-                            <div className="text-sm text-slate-300"> <FaEye /> </div>
+                        <div className="flex items-center text-sm text-slate-700 dark:text-slate-300 space-x-2 ">
+                            <div className="text-sm text-slate-300 dark:text-slate-500"> <FaEye /> </div>
                             <p className="mt-0.5">{views}</p>
                         </div>
-                        <div className="flex items-center text-sm text-slate-700 space-x-2">
-                            <div className="text-sm text-slate-300"> <FaRegCommentAlt /> </div>
+                        <div className="flex items-center text-sm text-slate-700 dark:text-slate-300 space-x-2">
+                            <div className="text-sm text-slate-300 dark:text-slate-500"> <FaRegCommentAlt /> </div>
                             <p className="mt-0.5">{comments}</p>
                         </div>
                     </section>

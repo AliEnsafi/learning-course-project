@@ -10,6 +10,7 @@ import navImage from "./../../public/Images/logo-academy.png"
 import Link from "next/link"
 import NavbarLinks from "./navbarLinks"
 import HambergerBtn from "./hambegerBtn"
+import { ThemeToggle } from "@/components/theme/ThemeToggle"
 
 
 const Navbar: React.FC = (props) => {
@@ -55,8 +56,8 @@ const Navbar: React.FC = (props) => {
 
     <>
       <nav
-        className={`container lg:flex lg:justify-around z-40 bg-white py-2
-                        fixed top-0 left-0 min-w-full shadow-sm transition-transform duration-300
+        className={`container lg:flex lg:justify-around z-40 bg-white dark:bg-gray-900 py-2
+                        fixed top-0 left-0 min-w-full shadow-sm dark:shadow-gray-800 transition-transform duration-300
                         ${showMenu ? "translate-y-0" : "-translate-y-full"} `}
       >
         <div className="flex space-x-0 lg:space-x-8 justify-between mx-4">
@@ -69,9 +70,12 @@ const Navbar: React.FC = (props) => {
           <NavbarLinks isOpen={isOpen} />
         </div>
 
-        <div className="hidden lg:flex nav-course-btn space-x-1 text-white bg-violet-700 px-5 py-2 rounded-md hover:bg-violet-800 transition-colors cursor-pointer">
-          <FaRegFile className="mt-1" />
-          <Link href='/blogs' className="cursor-pointer">دوره های ما</Link>
+        <div className="hidden lg:flex items-center gap-3">
+          <ThemeToggle />
+          <div className="nav-course-btn flex space-x-1 text-white bg-violet-700 px-5 py-2 rounded-md hover:bg-violet-800 transition-colors cursor-pointer">
+            <FaRegFile className="mt-1" />
+            <Link href='/blogs' className="cursor-pointer">دوره های ما</Link>
+          </div>
         </div>
       </nav>
     </>

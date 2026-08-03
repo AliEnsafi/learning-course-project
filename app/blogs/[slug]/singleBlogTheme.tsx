@@ -11,7 +11,7 @@ const SingleBlogTheme = ( {blog} : any ) => {
 
         <>
         <div className="w-full my-36">
-            <div className="container w-full lg:w-3/5 border border-slate-200 rounded-md p-10 lg:mr-28 space-y-10">
+            <div className="container w-full lg:w-3/5 border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-md p-10 lg:mr-28 space-y-10">
                 <div className="blog-item flex-col space-y-10">
                     <div className="blog-title">
                         <h2 className="text-xl font-bold"> {title} </h2>
@@ -37,13 +37,13 @@ const SingleBlogTheme = ( {blog} : any ) => {
                 </div>
                 <div className="blog-comments flex-col space-y-10">
                     <div className="flex justify-between items-center mb-6">
-                        <h2 className="text-lg lg:text-2xl font-bold text-gray-900">نظرات</h2>
+                        <h2 className="text-lg lg:text-2xl font-bold text-gray-900 dark:text-gray-100">نظرات</h2>
                     </div>
                     <form className="mb-6">
-                        <div className="py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200">
+                        <div className="py-2 px-4 mb-4 bg-white dark:bg-gray-800 rounded-lg rounded-t-lg border border-gray-200 dark:border-gray-700">
                             <label htmlFor="comment" className="sr-only">نظر شما</label>
                             <textarea id="comment" rows={6}
-                             className="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none"
+                             className="px-0 w-full text-sm text-gray-900 dark:text-gray-100 bg-transparent border-0 focus:ring-0 focus:outline-none"
                                 placeholder="نظر خود را اینجا وارد کنید..." required></textarea>
                         </div>
 
@@ -52,11 +52,11 @@ const SingleBlogTheme = ( {blog} : any ) => {
                         </div>
                     </form>
                 </div>
-                <div className=" blog-share flex justify-between border-t border-gray-200 pt-10">
+                <div className=" blog-share flex justify-between border-t border-gray-200 dark:border-gray-700 pt-10">
                     <div className="blog-share-title text-sm">
                         <p>اشتراک گذاری</p>
                     </div>
-                    <div className="blog-share-icon social-accounts flex justify-start mr-1.5 space-x-3 text-violet-950">
+                    <div className="blog-share-icon social-accounts flex justify-start mr-1.5 space-x-3 text-violet-950 dark:text-violet-300">
                         <FaInstagram className="cursor-pointer hover:text-violet-600 transition-colors" />
                         <FaTelegram className="cursor-pointer hover:text-violet-600 transition-colors" />
                         <FaTwitter className="cursor-pointer hover:text-violet-600 transition-colors" />

@@ -5,12 +5,12 @@ import Link from "next/link"
 
 import { FaRegLightbulb } from "react-icons/fa"
 
-import { props } from "./Data"
+import { SliderThemeProps } from "@/types/main.types"
 
 import './sliderTheme.css'
 
 
-const SliderTheme : React.FC<props> = (props) => {
+const SliderTheme : React.FC<SliderThemeProps> = (props) => {
 
     const { id , title , description , image } = props
 

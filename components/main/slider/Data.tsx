@@ -1,17 +1,7 @@
-import { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image"
 
 import firstImg from './../../../public/Images/young-attractive-man-sitting-sofa-home-working-laptop-online-using-internet-min.jpg'
 import secondImg from './../../../public/Images/enjoy-learn.jpeg'
-
-
-export type props = {
-
-    id: number,
-    title: string,
-    description: string,
-    image: string | StaticImageData
-
-}
 
 interface sliderDataTheme {
 

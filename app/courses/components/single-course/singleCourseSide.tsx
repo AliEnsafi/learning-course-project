@@ -9,7 +9,7 @@ const SingleCourseSide = (props : any) => {
 
     return(
         <>
-        <section key={key} className="border border-gray-200 px-10 py-5 rounded-md space-y-10 w-96">
+        <section key={key} className="border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-10 py-5 rounded-md space-y-10 w-96">
             <div className="flex-col space-y-6 items-center justify-center">
                 <div>
                     <h2 className="courseside-title text-xl text-center font-bold">اطلاعات دوره</h2>
@@ -17,7 +17,7 @@ const SingleCourseSide = (props : any) => {
                 <div className="courseside-img rounded">
                     <Image src={imageUrl} alt={price} width={300} height={180} />
                 </div>
-                <div className="font-semibold text-violet-700 text-center">
+                <div className="font-semibold text-violet-700 dark:text-violet-400 text-center">
                     {price}
                 </div>
                 <div className="courseside-btn">
@@ -26,7 +26,7 @@ const SingleCourseSide = (props : any) => {
                     </button>
                 </div>
             </div>
-            <div className="courseside-desc text-violet-950 space-y-5">
+            <div className="courseside-desc text-violet-950 dark:text-violet-200 space-y-5">
                 <div className="courseside-author flex space-x-2 items-center">
                     <FaUser />
                     <p> {author} </p>

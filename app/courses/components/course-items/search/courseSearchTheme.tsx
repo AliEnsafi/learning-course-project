@@ -42,7 +42,7 @@ const CourseSearchTheme : React.FC<Props> = (props) => {
           }}
           onFocus={() => setIsOpen(true)}
           placeholder="جستجو در دوره‌ها..."
-          className="w-full rounded-2xl border border-gray-300 bg-white px-4 py-3 pr-12 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+          className="w-full rounded-2xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-4 py-3 pr-12 text-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:focus:ring-blue-900"
         />
         <svg
           className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400"
@@ -54,13 +54,13 @@ const CourseSearchTheme : React.FC<Props> = (props) => {
       </div>
 
       {isOpen && query.length >= minChars && (
-        <div className="absolute z-50 mt-2 w-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-xl">
+        <div className="absolute z-50 mt-2 w-full overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-xl">
           {searchResults.length > 0 ? (
             <div className="max-h-60 overflow-auto">
               {searchResults.map((item) => (
                 <div
                   key={item.id}
-                  className="cursor-pointer px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition"
+                  className="cursor-pointer px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-blue-700 dark:hover:text-blue-400 transition"
                   onClick={() => {
 
                     setQuery(item.title)
@@ -73,7 +73,7 @@ const CourseSearchTheme : React.FC<Props> = (props) => {
               ))}
             </div>
           ) : (
-            <div className="px-4 py-3 text-sm text-gray-500">نتیجه‌ای یافت نشد</div>
+            <div className="px-4 py-3 text-sm text-gray-500 dark:text-gray-400">نتیجه‌ای یافت نشد</div>
           )}
         </div>
       )}

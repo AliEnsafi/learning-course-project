@@ -30,10 +30,10 @@ const CourseSide : React.FC<SidebarFilterProps> = ({ filter , setFilter }) => {
 
 
     const btnStyles = (isActive: boolean) =>
-    ` w-60 py-2 rounded-lg border  text-center text-gray-700 font-medium
+    ` w-60 py-2 rounded-lg border text-center font-medium
     hover:bg-violet-600 hover:text-white transition-colors
     ${
-        isActive ? 'bg-blue-600 text-white border-blue-600' : 'bg-gray-50 text-gray-700 border-gray-300'
+        isActive ? 'bg-blue-600 text-white border-blue-600' : 'bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600'
     } `
 
     return(
@@ -41,10 +41,10 @@ const CourseSide : React.FC<SidebarFilterProps> = ({ filter , setFilter }) => {
         <>
 
         <div className="hidden lg:block w-full pr-5">
-            <div className="mt-10 border border-gray-200 rounded-xl w-full">
+            <div className="mt-10 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-xl w-full">
 
                 <div className="filter-price bg-violet-500 text-white rounded-t-xl">
-                    <div className="price-title border-b border-gray-200 text-center py-5">
+                    <div className="price-title border-b border-gray-200 dark:border-gray-700 text-center py-5">
                         <h2 className="text-xl">نوع دوره</h2>
                     </div>
                 </div>

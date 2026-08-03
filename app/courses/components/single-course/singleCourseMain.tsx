@@ -15,7 +15,7 @@ const SingleCourseMain = (props : any) => {
 
             <div className="flex-col space-y-8 mt-5">
                 <h2 className="text-2xl"> {title} </h2>
-                <div className="flex space-x-3 text-gray-500 text-xl">
+                <div className="flex space-x-3 text-gray-500 dark:text-gray-400 text-xl">
                     <FaUserTie />
                     <p> {author} </p>
                 </div>
@@ -23,10 +23,10 @@ const SingleCourseMain = (props : any) => {
 
             <div className="explain mt-14 space-y-10">
                 <div className="explain-title">
-                    <p className="text-2xl font-semibold border-b-2 border-violet-700 w-40 pb-2">توضیحات دوره</p>
+                    <p className="text-2xl font-semibold border-b-2 border-violet-700 dark:border-violet-500 w-40 pb-2">توضیحات دوره</p>
                 </div>
                 <div className="explain-desc">
-                    <p className="font-extralight text-gray-600 opacity-75 text-justify leading-relaxed">
+                    <p className="font-extralight text-gray-600 dark:text-gray-400 opacity-75 text-justify leading-relaxed">
                      لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
                       چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای م
                      تنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه
@@ -46,13 +46,13 @@ const SingleCourseMain = (props : any) => {
 
             <div className="flex-col space-y-10 my-16">
                 <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-lg lg:text-2xl font-semibold text-gray-900">نظرات</h2>
+                    <h2 className="text-lg lg:text-2xl font-semibold text-gray-900 dark:text-gray-100">نظرات</h2>
                 </div>
                 <form className="mb-6">
-                    <div className="py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200">
+                    <div className="py-2 px-4 mb-4 bg-white dark:bg-gray-800 rounded-lg rounded-t-lg border border-gray-200 dark:border-gray-700">
                         <label htmlFor="comment" className="sr-only">نظر شما</label>
                         <textarea id="comment" rows={6}
-                            className="px-0 w-full text-sm text-gray-900 border-0 focus:ring-0 focus:outline-none"
+                            className="px-0 w-full text-sm text-gray-900 dark:text-gray-100 bg-transparent border-0 focus:ring-0 focus:outline-none"
                             placeholder="نظر خود را اینجا وارد کنید..." required></textarea>
                     </div>
 

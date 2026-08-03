@@ -2,11 +2,7 @@
 
 import React from "react"
 import { HiMenu, HiX } from "react-icons/hi"
-
-interface ChildProps {
-  isOpen: boolean
-  toggle: () => void
-}
+import { ChildProps } from "@/types/header.types"
 
 
 const HambergerBtn: React.FC<ChildProps> = (props) => {
@@ -16,7 +12,7 @@ const HambergerBtn: React.FC<ChildProps> = (props) => {
     <>
       <button
         onClick={toggle}
-        className="nav-burgermenu lg:hidden mt-1 text-xl text-blue-700 cursor-pointer z-50
+        className="nav-burgermenu lg:hidden mt-1 text-xl text-blue-700 dark:text-violet-400 cursor-pointer z-50
                                 transition-all duration-500 ease-in-out transform"
       >
         <div className="relative w-8 h-8 flex items-center justify-center">

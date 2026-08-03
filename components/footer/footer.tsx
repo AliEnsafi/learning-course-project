@@ -1,20 +1,15 @@
 import React from "react"
 
-
 import Description from "./description"
 import LastArticles from "./lastArticles"
 import ContactUs from "./contactUs"
 
 
-
-
 const Footer : React.FC = () => {
 
-
     return(
-
         <>
-        <section className="footer">
+        <section className="footer border-t border-gray-200 dark:border-gray-800 pt-10 pb-6">
 
             <div className="container space-y-10 lg:flex lg:justify-center lg:space-x-48">
 
@@ -29,9 +24,6 @@ const Footer : React.FC = () => {
         </section>
         </>
     )
-
-
 }
-
 
 export default Footer

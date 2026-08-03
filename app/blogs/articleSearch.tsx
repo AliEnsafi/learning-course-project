@@ -5,7 +5,7 @@ export default function ArticleSearch({ items, onQueryChange }: { items: any[], 
     <input
       type="text"
       placeholder="جستجو در مقالات..."
-      className="w-full p-4 rounded-md border border-slate-200 outline-none focus:border-violet-500 transition"
+      className="w-full p-4 rounded-md border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 outline-none focus:border-violet-500 transition"
       onChange={(e) => onQueryChange(e.target.value)}
     />
   );

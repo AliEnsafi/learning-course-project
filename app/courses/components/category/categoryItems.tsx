@@ -18,9 +18,9 @@ const CategoryItems : React.FC = () => {
 
                             return(
                                 <div key={id} className="category-item flex flex-col items-center space-y-5 py-4
-                                                         cursor-pointer border border-gray-200 rounded-xl">
-                                    <div className="category-icon text-center text-violet-950"><Icon size={28} /></div>
-                                    <div className="category-title opacity-80 hover:text-violet-800 transition-colors"> {title} </div>
+                                                         cursor-pointer border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-xl hover:border-violet-500 dark:hover:border-violet-500 transition-colors">
+                                    <div className="category-icon text-center text-violet-950 dark:text-violet-300"><Icon size={28} /></div>
+                                    <div className="category-title opacity-80 hover:text-violet-800 dark:hover:text-violet-400 transition-colors"> {title} </div>
                                 </div>
                             )
                         })

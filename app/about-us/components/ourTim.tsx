@@ -18,7 +18,7 @@ const OurTim = () => {
     <section className="our-tim my-10">
         <div className="container">
             <div className="tim-title">
-                <h3 className="text-gray-800 font-bold text-xl mt-1">
+                <h3 className="text-gray-800 dark:text-gray-100 font-bold text-xl mt-1">
                         {`تیم  `}
                     <span className="relative">
                         ما
@@ -34,20 +34,20 @@ const OurTim = () => {
 
                         return(
                             <div key={id} className="flex flex-col items-center transition duration-200 cursor-pointer
-                                            hover:shadow-sm border border-gray-300 rounded-xl pt-8 pb-9">
+                                            hover:shadow-sm border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 rounded-xl pt-8 pb-9">
 
                                 <div className="bdr-ripple-ani-btn w-24 h-24 mb-5 transform
                                                 transition duration-200 border-4 ring ring-violet-700 ring-opacity-10
-                                                overflow-hidden bg-gray-300 group relative rounded-full border-solid">
+                                                overflow-hidden bg-gray-300 dark:bg-gray-600 group relative rounded-full border-solid">
                                     <Image src={teamImg} alt="teamImage"
                                            className="transition duration-200 transform group-hover:scale-110 w-full h-full"/>
                                 </div>
                                 <div className="mt-2 space-y-5 text-center">
-                                    <h4 className="tim-title text-violet-800 font-bold
-                                             hover:text-gray-900 transition duration-200 leading-3">
+                                    <h4 className="tim-title text-violet-800 dark:text-violet-400 font-bold
+                                             hover:text-gray-900 dark:hover:text-gray-100 transition duration-200 leading-3">
                                         {name}
                                     </h4>
-                                    <h6 className="time-job text-sm text-gray-700">
+                                    <h6 className="time-job text-sm text-gray-700 dark:text-gray-400">
                                         {job}
                                     </h6>
                                 </div>
@@ -58,17 +58,17 @@ const OurTim = () => {
                 }
                 <div>
                             <div className="flex flex-col items-center transition duration-200 cursor-pointer
-                                            hover:shadow-sm border border-gray-300 rounded-xl pt-8 pb-9 h-64">
+                                            hover:shadow-sm border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 rounded-xl pt-8 pb-9 h-64">
 
                                 <div className="mt-2 space-y-10 text-center">
-                                    <h4 className="tim-title text-violet-800 font-bold
-                                             hover:text-gray-900 transition duration-200 leading-3">
+                                    <h4 className="tim-title text-violet-800 dark:text-violet-400 font-bold
+                                             hover:text-gray-900 dark:hover:text-gray-100 transition duration-200 leading-3">
                                         نفر بعدی شما باشید
                                     </h4>
-                                    <h6 className="time-job text-sm text-gray-700 leading-relaxed">
+                                    <h6 className="time-job text-sm text-gray-700 dark:text-gray-400 leading-relaxed">
                                         اگر در شاخه ای متخصص هستید، به کمک شما نیازمندیم
                                     </h6>
-                                    <div className="text-xs text-violet-600 hover:text-violet-800 transition">
+                                    <div className="text-xs text-violet-600 dark:text-violet-400 hover:text-violet-800 dark:hover:text-violet-300 transition">
                                         <Link href="./contact-us" className="flex justify-center">
                                         درخواست همکاری
                                         <span><FaArrowLeft className="mx-1 mt-0.5" /></span>

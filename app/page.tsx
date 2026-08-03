@@ -11,7 +11,6 @@ export default function Home() {
       <Navbar />
       <Header />
 
-      {/* main */}
       <LearnMore />
       <OurCourses />
       <WhyUs />

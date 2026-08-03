@@ -11,7 +11,7 @@ const FirstSlider : React.FC = () => {
     return(
 
         <>
-        <div className="w-full bg-violet-700">
+        <div className="w-full bg-violet-700 dark:bg-gray-800">
 
             {
                 firstData.map((item) :any => {

@@ -1,6 +1,5 @@
 
 import { IconType } from "react-icons"
-
 import { FaPhone , FaEnvelope , FaMapMarked } from "react-icons/fa"
 
 

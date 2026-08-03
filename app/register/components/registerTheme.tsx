@@ -22,7 +22,7 @@ const RegisterTheme = () => {
 
     return(
         <>
-        <div className="w-lg flex flex-col justify-center border border-gray-200 rounded  px-6 py-12 lg:px-8">
+        <div className="w-lg flex flex-col justify-center border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded px-6 py-12 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                 <Image src={registerImg} alt="registerImage" className="mx-auto w-16 h-16"/>
                 <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight">ثبت نام</h2>
@@ -37,8 +37,8 @@ const RegisterTheme = () => {
 
                             <input id="email" type="email" name="email" required autoComplete="email"
                             onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.email}
-                            className="block w-full rounded-md px-3 py-1.5 text-base outline-none outline-white/10
-                                       ring ring-gray-200 sm:text-sm/6" />
+                            className="block w-full rounded-md px-3 py-1.5 text-base outline-none outline-white/10 bg-white dark:bg-gray-800
+                                       ring ring-gray-200 dark:ring-gray-600 sm:text-sm/6" />
 
                             {
                                 formik.touched.email && formik.errors.email && (
@@ -57,9 +57,9 @@ const RegisterTheme = () => {
                             <div className="relative">
                                 <input id="password" type={showPassword ? "string" : "password"} name="password" required autoComplete="current-password"
                                         onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.password}
-                                        className="block w-full rounded-md px-3 py-1.5 text-base outline-none outline-white/10
-                                                    ring ring-gray-200 sm:text-sm/6" />
-                                <button className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer"
+                                        className="block w-full rounded-md px-3 py-1.5 text-base outline-none outline-white/10 bg-white dark:bg-gray-800
+                                                    ring ring-gray-200 dark:ring-gray-600 sm:text-sm/6" />
+                                <button className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 cursor-pointer"
                                         onMouseDown={ () => setShowPassword(true) }
                                         onMouseUp={ () => setShowPassword(false) }
                                         onMouseLeave={ () => setShowPassword(false) }
@@ -84,10 +84,10 @@ const RegisterTheme = () => {
                             <div className="relative">
                                 <input id="password" type={showConfirm ? "string" : "password"} name="confirmPassword" required autoComplete="current-password"
                                     onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.confirmPassword}
-                                    className="block w-full rounded-md px-3 py-1.5 text-base outline-none outline-white/10
-                                                ring ring-gray-200 sm:text-sm/6" />
+                                    className="block w-full rounded-md px-3 py-1.5 text-base outline-none outline-white/10 bg-white dark:bg-gray-800
+                                                ring ring-gray-200 dark:ring-gray-600 sm:text-sm/6" />
 
-                                <button className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-500 cursor-pointer"
+                                <button className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 cursor-pointer"
                                         onMouseDown={ () => setShowConfirm(true) }
                                         onMouseUp={ () => setShowConfirm(false) }
                                         onMouseLeave={ () => setShowConfirm(false) }

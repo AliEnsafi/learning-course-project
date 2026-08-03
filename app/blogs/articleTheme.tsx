@@ -4,13 +4,14 @@ import { useEffect, useState, useMemo } from "react"
 import { supabase } from "@/lib/supabase"
 import ArticleSearch from "./articleSearch"
 import ArticleList from "./articleList"
-import { Article } from "./data"
+import { Article } from "@/types/blog.types";
 
 export default function ArticleTheme() {
 
   const [articles, setArticles] = useState<Article[]>([])
   const [searchQuery, setSearchQuery] = useState("")
   const [loading, setLoading] = useState(true)
+
 
   useEffect(() => {
 
@@ -29,6 +30,7 @@ export default function ArticleTheme() {
 
     fetchArticles()
   }, [])
+
 
   const filteredArticles = useMemo(() => {
 

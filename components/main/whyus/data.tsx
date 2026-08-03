@@ -1,17 +1,7 @@
 
-import pictue1 from './../../../public/Images/stat-time.png'
-import pictue2 from './../../../public/Images/stat-teacher.png'
-import pictue3 from './../../../public/Images/stat-student.png'
+import { WhyUsThemeProps } from "@/types/main.types"
 
-
-export interface dataItemsProps {
-    id: number,
-    title: string,
-    description: string
-}
-
-
-export const data : dataItemsProps[] = [
+export const data : WhyUsThemeProps[] = [
 
     {
         id: 1,

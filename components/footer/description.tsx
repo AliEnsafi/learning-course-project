@@ -18,12 +18,12 @@ const Description : React.FC = () => {
                         <Image src={logo} alt="logo" />
                     </div>
 
-                    <div className="social-accounts flex justify-start text-lg mr-1.5 space-x-3 text-violet-950">
+                    <div className="social-accounts flex justify-start text-lg mr-1.5 space-x-3 text-violet-950 dark:text-violet-300">
 
-                        <FaInstagram className="cursor-pointer hover:text-violet-600 transition-colors" />
-                        <FaTelegram className="cursor-pointer hover:text-violet-600 transition-colors" />
-                        <FaTwitter className="cursor-pointer hover:text-violet-600 transition-colors" />
-                        <FaYoutube className="cursor-pointer hover:text-violet-600 transition-colors" />
+                        <FaInstagram className="cursor-pointer hover:text-violet-600 dark:hover:text-violet-400 transition-colors" />
+                        <FaTelegram className="cursor-pointer hover:text-violet-600 dark:hover:text-violet-400 transition-colors" />
+                        <FaTwitter className="cursor-pointer hover:text-violet-600 dark:hover:text-violet-400 transition-colors" />
+                        <FaYoutube className="cursor-pointer hover:text-violet-600 dark:hover:text-violet-400 transition-colors" />
 
                     </div>
 
@@ -55,11 +55,7 @@ const Description : React.FC = () => {
                     </div>
                 </div>
         </>
-
     )
-
-
 }
-
 
 export default Description

@@ -9,7 +9,7 @@ import { InputData } from "./inputData"
 
 const getInputClass = (fieldName: keyof FormValues, formik: any): string => {
 
-  const baseClasses = "mt-1 block w-full rounded-md border-gray-300 shadow-sm outline-none focus:border-indigo-300 p-2 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+  const baseClasses = "mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 shadow-sm outline-none focus:border-indigo-300 dark:focus:border-indigo-500 p-2 focus:ring focus:ring-indigo-200 dark:focus:ring-indigo-900 focus:ring-opacity-50"
   const errorClasses = "border-red-500"
 
   if (formik.touched[fieldName] && formik.errors[fieldName]) {
@@ -24,8 +24,8 @@ const FormTheme : React.FC = () => {
   const { formik } = useContactForm()
 
   return (
-    <form onSubmit={formik.handleSubmit} className="max-w-2xl mx-auto p-6 bg-white space-y-10">
-      <h2 className="text-lg font-bold mb-4 text-violet-600">فرم تماس</h2>
+    <form onSubmit={formik.handleSubmit} className="max-w-2xl mx-auto p-6 bg-white dark:bg-gray-900 space-y-10">
+      <h2 className="text-lg font-bold mb-4 text-violet-600 dark:text-violet-400">فرم تماس</h2>
 
       {
         InputData.map((item) => {
@@ -36,7 +36,7 @@ const FormTheme : React.FC = () => {
           return(
             <div className="space-y-2 mb-4">
 
-                <label htmlFor={name} className="block text-sm font-medium text-gray-700">
+                <label htmlFor={name} className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                   {label} {required && <span className="text-red-500">*</span>}
                 </label>
                 {

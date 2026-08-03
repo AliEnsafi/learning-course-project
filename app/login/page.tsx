@@ -1,7 +1,5 @@
-import Link from "next/link"
 import React from "react"
 import LoginTheme from "./components/loginTheme"
-
 
 const LoginPage : React.FC = () => {
 
@@ -17,6 +15,5 @@ const LoginPage : React.FC = () => {
     )
 
 }
-
 
 export default LoginPage

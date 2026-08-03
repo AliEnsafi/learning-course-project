@@ -3,8 +3,7 @@ import React from "react"
 import Information from "./information"
 import ContactForm from "./forms/contactForm"
 
-import { ToastContainer } from "react-toastify"
-import "react-toastify/ReactToastify.css"
+import { ThemeToastContainer } from "@/components/theme/ThemeToastContainer"
 
 const Contact : React.FC = () => {
 
@@ -16,18 +15,7 @@ const Contact : React.FC = () => {
 
             <ContactForm />
 
-            <ToastContainer
-                position="top-right"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={true}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-                theme="light"
-            />
+            <ThemeToastContainer />
 
         </section>
         </>

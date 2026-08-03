@@ -22,7 +22,7 @@ const Reactions : React.FC = () => {
                     <div className="text-lg lg:text-2xl font-semibold content-center">از زبان شما</div>
                 </div>
 
-                <div className="hidden md:flex md:space-x-4 w-1/5 justify-center content-center items-center text-violet-600">
+                <div className="hidden md:flex md:space-x-4 w-1/5 justify-center content-center items-center text-violet-600 dark:text-violet-400">
                     <FaAngleRight className="text-2xl cursor-pointer" />
                     <FaAngleLeft className="text-2xl cursor-pointer" />
                 </div>

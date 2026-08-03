@@ -1,11 +1,9 @@
-import React from "react"
 
+import React from "react"
 import { contactUs } from "./data"
 
 
-
 const ContactUs : React.FC = () => {
-
 
     return(
 
@@ -18,16 +16,14 @@ const ContactUs : React.FC = () => {
                 </h2>
             </div>
             {
-
                 contactUs.map((item) : any => {
 
                     const Icon = item.icon
                     const { id , title , description } = item
 
                     return(
-
                         <div key={id} className="contact-phone flex justify-start space-x-4 content-center">
-                            <div className="phone-icon flex justify-center items-center text-violet-500 border w-10 rounded-xl">
+                            <div className="phone-icon flex justify-center items-center text-violet-500 dark:text-violet-400 border dark:border-gray-600 w-10 rounded-xl">
                                 <Icon />
                             </div>
                             <div className="phone-data space-y-1">
@@ -35,15 +31,12 @@ const ContactUs : React.FC = () => {
                                 <p className="phone-number text-sm opacity-60">{description}</p>
                             </div>
                         </div>
-
                     )
                 })
             }
         </div>
         </>
-
     )
 }
-
 
 export default ContactUs

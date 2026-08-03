@@ -1,14 +1,4 @@
 
-export type reactionProps = {
-
-    id: number,
-    name: string,
-    age: number,
-    city: string,
-    massage: string
-
-}
-
 interface reaction {
 
     id: number,

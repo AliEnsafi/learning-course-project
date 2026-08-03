@@ -10,8 +10,8 @@ const Breadcrumb = () => {
   const pathNames = pathname.split("/").filter((path) => path)
 
   return (
-    <nav className="flex py-4 text-sm text-gray-600">
-      <Link href="/" className="hover:text-blue-500">خانه</Link>
+    <nav className="flex py-4 text-sm text-gray-600 dark:text-gray-400">
+      <Link href="/" className="hover:text-blue-500 dark:hover:text-blue-400">خانه</Link>
 
       {pathNames.map((link, index) => {
 
@@ -23,9 +23,9 @@ const Breadcrumb = () => {
           <div key={index} className="flex items-center">
             <span className="mx-2">/</span>
             {isLast ? (
-              <span className="text-gray-600">{decodeURIComponent(link)}</span>
+              <span className="text-gray-600 dark:text-gray-400">{decodeURIComponent(link)}</span>
             ) : (
-              <Link href={href} className="hover:text-blue-500 capitalize">
+              <Link href={href} className="hover:text-blue-500 dark:hover:text-blue-400 capitalize">
                 {decodeURIComponent(link)}
               </Link>
             )}

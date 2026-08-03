@@ -8,23 +8,14 @@ import CourseSearch from "./search/courseSearch"
 
 import { supabase } from "@/lib/supabase"
 
+import { CourseItemsProps } from "@/types/courses.types"
 type FilterType = "all" | "free" | "paid"
 
-interface Course  {
-  id: string | number
-  imageUrl?: string
-  title: string
-  author?: string
-  time?: string
-  pricedisplay?: string
-  slug: string
-  priceRaw?: number
-}
 
 
 const CourseItems = () => {
 
-  const [courses, setCourses] = useState<Course[]>([])
+  const [courses, setCourses] = useState<CourseItemsProps[]>([])
   const [filter, setFilter] = useState<FilterType>("all")
   const [error, setError] = useState<string | null>(null)
 
@@ -40,7 +31,7 @@ const CourseItems = () => {
         setError(error.message)
         return
       }
-      setCourses((data || []) as Course[])
+      setCourses((data || []) as CourseItemsProps[])
     }
 
     fetchCourses()
@@ -100,7 +91,7 @@ const CourseItems = () => {
                 />
               ))
             ) : (
-              <div className="col-span-full py-20 text-center text-gray-500">
+              <div className="col-span-full py-20 text-center text-gray-500 dark:text-gray-400">
                 دوره‌ای با این مشخصات پیدا نشد.
               </div>
             )}

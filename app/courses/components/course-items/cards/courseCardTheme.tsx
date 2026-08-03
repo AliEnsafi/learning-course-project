@@ -16,17 +16,17 @@ const CourseCardTheme = (props : any) => {
 
   return (
     <>
-      <article className="border border-slate-200 rounded-md shadow-sm m-2 text-sm cursor-pointer">
+      <article className="border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-md shadow-sm dark:shadow-gray-800 m-2 text-sm cursor-pointer">
 
         <Link href={`/courses/${slug}`}>
           <Image src={imageUrl} alt="aspNET" className="w-full" width={500} height={300} />
           <div className="py-5 px-3 space-y-4">
             <p>{title}</p>
-            <div className="border-b-2 border-b-slate-200 py-3 flex space-x-2">
-              <div className="text-slate-300">
+            <div className="border-b-2 border-b-slate-200 dark:border-b-gray-700 py-3 flex space-x-2">
+              <div className="text-slate-300 dark:text-slate-500">
                 <FaUser />
               </div>
-              <a href="" className="text-slate-500 text-xs">
+              <a href="" className="text-slate-500 dark:text-slate-400 text-xs">
                 {author}
               </a>
             </div>
@@ -44,7 +44,7 @@ const CourseCardTheme = (props : any) => {
             </div>
 
             <div className="mx-3">
-              <h6 className="text-violet-800 text-sm">
+              <h6 className="text-violet-800 dark:text-violet-400 text-sm">
                 <PersianNumber>{price}</PersianNumber>
               </h6>
             </div>

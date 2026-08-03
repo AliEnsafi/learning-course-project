@@ -1,21 +1,9 @@
 
-import { StaticImageData } from 'next/image'
-
 import course1 from './../../../public/Images/new/asp-net.jpg'
 import course2 from './../../../public/Images/new/be-programmer.jpg'
 import course3 from './../../../public/Images/new/microservice.jpg'
 
-export interface dataItemsProps {
-
-    id: number,
-    image: StaticImageData,
-    title: string,
-    description: string,
-    level: string,
-    price: string,
-    slug: string
-}
-
+import { dataItemsProps } from '@/types/courses.types'
 
 export const data : dataItemsProps[] = [
 

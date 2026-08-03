@@ -17,8 +17,8 @@ const LearnMore: React.FC = () => {
 
   return (
     <>
-      <div style={backgroundStyle}>
-        <div className="mt-20 container block text-center items-center space-y-8 lg:space-y-0 lg:flex lg:justify-center lg:space-x-10">
+      <div style={backgroundStyle} className="dark:bg-gray-800">
+        <div className="my-20 container block text-center items-center space-y-8 lg:space-y-0 lg:flex lg:justify-center lg:space-x-10">
 
           <div className="learnmore-img flex justify-center md:justify-start md:mr-5 lg:mr-0">
             <Image
@@ -31,7 +31,7 @@ const LearnMore: React.FC = () => {
           <div className="learnmore-docs text-start mr-4 lg:mr-0 mt-4 lg:mt-0 lg:max-w-xl space-y-3">
             <div className="docs-title">
               <h2 className="text-2xl font-bold">
-                درباره <span className="text-violet-700">آموزشگاه ما</span>{" "}
+                درباره <span className="text-violet-700 dark:text-violet-400">آموزشگاه ما</span>{" "}
                 بیشتر بدانید...
               </h2>
               <br />
@@ -53,8 +53,8 @@ const LearnMore: React.FC = () => {
             </div>
 
             <div
-              className="docs-btn flex justify-center space-x-1 bg-white text-violet-700 cursor-pointer border border-violet-700 rounded-md
-                                w-28 py-2 hover:bg-violet-700 hover:text-white transition-colors"
+              className="docs-btn flex justify-center space-x-1 bg-white dark:bg-gray-800 text-violet-700 dark:text-violet-300 cursor-pointer border border-violet-700 dark:border-violet-500 rounded-md
+                                w-28 py-2 hover:bg-violet-700 hover:text-white dark:hover:bg-violet-600 transition-colors"
             >
               <FaRegLightbulb className="mt-1" />
               <Link href='/about-us' className="cursor-pointer">درباره ما</Link>

@@ -15,9 +15,9 @@ const Information : React.FC = () => {
 
                     return(
 
-                    <div key={id} className="container border border-slate-200 rounded-md p-10 lg:mr-5 space-y-10">
+                    <div key={id} className="container border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-md p-10 lg:mr-5 space-y-10">
                         <div className="aboutUs-item flex-col space-y-3">
-                            <div className="aboutUs-title text-lg flex items-center space-x-2 text-violet-600 my-5">
+                            <div className="aboutUs-title text-lg flex items-center space-x-2 text-violet-600 dark:text-violet-400 my-5">
                                 <Icon />
                                 <h2 className="font-bold"> {title} </h2>
                             </div>

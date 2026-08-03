@@ -42,8 +42,8 @@ async function Article () {
 
                 <div className="aticle-morebtn">
                     <div className="flex justify-center mt-5">
-                            <div className="flex text-center justify-center items-center space-x-1 bg-white text-violet-700 cursor-pointer border border-violet-700 rounded-md
-                                            w-36 py-2 hover:bg-violet-700 hover:text-white transition-colors">
+                            <div className="flex text-center justify-center items-center space-x-1 bg-white dark:bg-gray-800 text-violet-700 dark:text-violet-300 cursor-pointer border border-violet-700 dark:border-violet-500 rounded-md
+                                            w-36 py-2 hover:bg-violet-700 hover:text-white dark:hover:bg-violet-600 transition-colors">
                             <FaRegClone />
                             <Link href='./blogs' className="cursor-pointer">مقالات بیشتر</Link>
                         </div>

@@ -10,7 +10,7 @@ const SecondSlider : React.FC = () => {
     return(
 
         <>
-        <div className="bg-violet-700 mx-auto">
+        <div className="bg-violet-700 dark:bg-gray-800 mx-auto">
 
             {
                 secondData.map((item) :any => {

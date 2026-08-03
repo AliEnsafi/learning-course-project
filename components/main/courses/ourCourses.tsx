@@ -32,9 +32,9 @@ async function OurCourses () {
           </div>
 
           <div
-            className="docs-btn hidden md:flex md:justify-center md:items-center space-x-1 bg-white text-violet-700 cursor-pointer
-                        text-sm w-31 h-10 border px-3 border-violet-700 rounded-md hover:bg-violet-700 hover:text-white
-                        transition-colors"
+            className="docs-btn hidden md:flex md:justify-center md:items-center space-x-1 bg-white dark:bg-gray-800 text-violet-700 dark:text-violet-300 cursor-pointer
+                        text-sm w-31 h-10 border px-3 border-violet-700 dark:border-violet-500 rounded-md hover:bg-violet-700 hover:text-white
+                        dark:hover:bg-violet-600 transition-colors"
           >
             <Link href="./courses" className="cursor-pointer">مشاهده همه</Link>
             <FaAngleLeft />

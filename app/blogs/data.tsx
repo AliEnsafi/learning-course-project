@@ -1,4 +1,3 @@
-import { StaticImageData } from "next/image"
 
 import programming from './../../public/Images/new/programming.jpg'
 import googleColab from './../../public/Images/new/google-colab.jpg'
@@ -9,35 +8,9 @@ import Typescript from './../../public/Images/new/type.jpg'
 import Api from './../../public/Images/new/api.jpg'
 import top10Language from './../../public/Images/new/program-language.jpg'
 
+import { ArticleDataProps } from '@/types/blog.types'
 
-
-export interface articleDataProps {
-
-    id: number,
-    image: string | StaticImageData,
-    slug: string,
-    title: string,
-    description: string,
-    writer: string,
-    views: number,
-    comments: number
-
-}
-
-export interface Article {
-
-  id: string
-  title: string
-  slug: string
-  description: string | null
-  imageUrl: string
-  views: number
-  comments: number
-  writer: string
-}
-
-
-export const articleData : articleDataProps[] = [
+export const articleData : ArticleDataProps[] = [
 
     {
         id: 1,

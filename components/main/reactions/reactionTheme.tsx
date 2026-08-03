@@ -2,7 +2,7 @@ import React from "react"
 
 import { FaAngleDoubleLeft , FaUserCircle } from "react-icons/fa"
 
-import { reactionProps } from "./data"
+import { reactionProps } from "@/types/main.types"
 
 
 const ReactionTheme : React.FC<reactionProps> = (props) => {
@@ -12,7 +12,7 @@ const ReactionTheme : React.FC<reactionProps> = (props) => {
     return(
 
         <>
-        <div key={id} className="user-massage flex-col space-y-10 px-18 py-10 shadow-sm select-none">
+        <div key={id} className="user-massage flex-col space-y-10 px-18 py-10 shadow-sm dark:shadow-gray-800 bg-white dark:bg-gray-900 rounded-lg select-none">
 
             <div className="user-info flex justify-start">
 

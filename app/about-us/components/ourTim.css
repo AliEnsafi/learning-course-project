@@ -3,3 +3,7 @@
     color: white;
     background: #3b82f61a;
 }
+
+.dark .bdr-ripple-ani-btn {
+    background: #3b82f633;
+}
