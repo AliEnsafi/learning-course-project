@@ -50,7 +50,6 @@ const NavbarLinks : React.FC<ChildProps> = (props) => {
                 <Link className="cursor-pointer hover:text-violet-600 transition-colors" href='/blogs'> وبلاگ </Link>
                 <Link className="cursor-pointer hover:text-violet-600 transition-colors" href='/about-us'> درباره ما </Link>
                 <Link className="cursor-pointer hover:text-violet-600 dark:hover:text-violet-400 transition-colors" href='/contact-us'> تماس با ما </Link>
-                <ThemeToggle />
                 <div className="flex justify-center space-x-1">
                     <Link className="cursor-pointer hover:text-violet-600 transition-colors" href='/login'>ورود</Link>
                     <p>/</p>

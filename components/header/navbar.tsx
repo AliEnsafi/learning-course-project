@@ -63,15 +63,17 @@ const Navbar: React.FC = (props) => {
         <div className="flex space-x-0 lg:space-x-8 justify-between mx-4">
           <HambergerBtn isOpen={isOpen} toggle={toggleMenu} />
 
-          <div className="nav-img cursor-pointer z-50">
-            <Image src={navImage} alt="navImage" width={48} height={40} />
+          <div className="flex space-x-1">
+            <div className="nav-img cursor-pointer z-50">
+              <Image src={navImage} alt="navImage" width={48} height={40} />
+            </div>
+            <div className="block lg:hidden mt-1.5 z-50"> <ThemeToggle /></div>
           </div>
 
           <NavbarLinks isOpen={isOpen} />
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
-          <ThemeToggle />
           <div className="nav-course-btn flex space-x-1 text-white bg-violet-700 px-5 py-2 rounded-md hover:bg-violet-800 transition-colors cursor-pointer">
             <FaRegFile className="mt-1" />
             <Link href='/blogs' className="cursor-pointer">دوره های ما</Link>
