@@ -10,6 +10,18 @@ export interface Article {
   views: number
   comments: number
   writer: string
+  created_at?: string
+}
+
+export interface BlogDetail extends Article {
+  content?: string | null
+}
+
+export interface SidebarArticle {
+  id: string
+  title: string
+  slug: string
+  writer: string
 }
 
 export interface ArticleDataProps {

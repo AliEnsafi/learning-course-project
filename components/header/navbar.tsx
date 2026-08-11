@@ -78,6 +78,7 @@ const Navbar: React.FC = (props) => {
             <FaRegFile className="mt-1" />
             <Link href='/blogs' className="cursor-pointer">دوره های ما</Link>
           </div>
+          <div className="hidden lg:block"> <ThemeToggle /> </div>
         </div>
       </nav>
     </>

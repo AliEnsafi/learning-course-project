@@ -21,4 +21,13 @@ export interface CourseItemsProps {
   pricedisplay?: string
   slug: string
   priceRaw?: number
+  created_at?: string
+}
+
+export interface SidebarCourse {
+  id: string | number
+  title: string
+  slug: string
+  author?: string | null
+  pricedisplay?: string | null
 }

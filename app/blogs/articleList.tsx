@@ -47,7 +47,7 @@ export default function ArticleList({ articles, loading }: ArticleListProps) {
             </div>
 
             <footer className="p-5 border-t border-slate-200 dark:border-gray-700 flex justify-between items-center">
-              <section className="flex space-x-4 space-x-reverse">
+              <section className="flex space-x-4">
                 <div className="flex items-center text-sm text-slate-700 dark:text-slate-300 gap-1">
                   <span className="text-slate-300 dark:text-slate-500"><FaEye /></span>
                   <p>{item.views}</p>

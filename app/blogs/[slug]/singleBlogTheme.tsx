@@ -1,74 +1,67 @@
-import Image, { StaticImageData } from "next/image"
 
-import { FaTelegram , FaInstagram , FaYoutube , FaTwitter } from "react-icons/fa"
+import Image from "next/image"
 
+import { BlogDetail } from "@/types/blog.types"
+import BlogDesc from "./blogDesc"
+import BlogShare from "./blogShare"
 
-const SingleBlogTheme = ( {blog} : any ) => {
-
-  const { title , imageUrl } = blog
-
-    return(
-
-        <>
-        <div className="w-full my-36">
-            <div className="container w-full lg:w-3/5 border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-md p-10 lg:mr-28 space-y-10">
-                <div className="blog-item flex-col space-y-10">
-                    <div className="blog-title">
-                        <h2 className="text-xl font-bold"> {title} </h2>
-                    </div>
-                    <div className="blog-img">
-                      <Image src={imageUrl} alt={title} width={500} height={300} />
-                    </div>
-                    <div className="blog-desc">
-                        <p className="font-extralight opacity-55 text-justify">
-                            برای تغییر این متن بر روی دکمه ویرایش کلیک کنید چاپ و با استفاده از طراحان گرافیک است.برای تغییر این متن بر روی دکمه ویرایش کلیک کنید. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.برای تغییر این متن بر روی دکمه ویرایش کلیک کنید. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
-                        </p>
-                    </div>
-                    <div className="blog-desc">
-                        <p className="font-extralight opacity-55 text-justify">
-                            برای تغییر این متن بر روی دکمه ویرایش کلیک کنید چاپ و با استفاده از طراحان گرافیک است.برای تغییر این متن بر روی دکمه ویرایش کلیک کنید. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.برای تغییر این متن بر روی دکمه ویرایش کلیک کنید. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
-                        </p>
-                    </div>
-                    <div className="blog-desc">
-                        <p className="font-extralight opacity-55 text-justify">
-                            برای تغییر این متن بر روی دکمه ویرایش کلیک کنید چاپ و با استفاده از طراحان گرافیک است.برای تغییر این متن بر روی دکمه ویرایش کلیک کنید. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.برای تغییر این متن بر روی دکمه ویرایش کلیک کنید. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
-                        </p>
-                    </div>
-                </div>
-                <div className="blog-comments flex-col space-y-10">
-                    <div className="flex justify-between items-center mb-6">
-                        <h2 className="text-lg lg:text-2xl font-bold text-gray-900 dark:text-gray-100">نظرات</h2>
-                    </div>
-                    <form className="mb-6">
-                        <div className="py-2 px-4 mb-4 bg-white dark:bg-gray-800 rounded-lg rounded-t-lg border border-gray-200 dark:border-gray-700">
-                            <label htmlFor="comment" className="sr-only">نظر شما</label>
-                            <textarea id="comment" rows={6}
-                             className="px-0 w-full text-sm text-gray-900 dark:text-gray-100 bg-transparent border-0 focus:ring-0 focus:outline-none"
-                                placeholder="نظر خود را اینجا وارد کنید..." required></textarea>
-                        </div>
-
-                        <div className="nav-course-btn text-white bg-violet-700 px-5 py-2 rounded-md hover:bg-violet-800 transition-colors cursor-pointer w-20 text-center">
-                            <button className="cursor-pointer">ارسال</button>
-                        </div>
-                    </form>
-                </div>
-                <div className=" blog-share flex justify-between border-t border-gray-200 dark:border-gray-700 pt-10">
-                    <div className="blog-share-title text-sm">
-                        <p>اشتراک گذاری</p>
-                    </div>
-                    <div className="blog-share-icon social-accounts flex justify-start mr-1.5 space-x-3 text-violet-950 dark:text-violet-300">
-                        <FaInstagram className="cursor-pointer hover:text-violet-600 transition-colors" />
-                        <FaTelegram className="cursor-pointer hover:text-violet-600 transition-colors" />
-                        <FaTwitter className="cursor-pointer hover:text-violet-600 transition-colors" />
-                        <FaYoutube className="cursor-pointer hover:text-violet-600 transition-colors" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        </>
-
-    )
+interface SingleBlogThemeProps {
+  blog: BlogDetail
 }
 
+
+const SingleBlogTheme = ({ blog }: SingleBlogThemeProps) => {
+  const { title, imageUrl } = blog
+
+  return (
+    <article className="min-w-0 flex-1 space-y-10 rounded-md border border-slate-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-900 sm:p-8 lg:p-10">
+      <div className="blog-item flex-col space-y-10">
+        <div className="blog-title">
+          <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100">{title}</h1>
+        </div>
+        <div className="blog-img overflow-hidden rounded-md">
+          <Image
+            src={imageUrl}
+            alt={title}
+            width={400}
+            height={250}
+            className="object-cover"
+            priority
+          />
+        </div>
+        <BlogDesc />
+      </div>
+
+      <div className="blog-comments flex-col space-y-10">
+        <div className="mb-6 flex items-center justify-between">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100 lg:text-2xl">نظرات</h2>
+        </div>
+        <form className="mb-6">
+          <div className="mb-4 rounded-lg rounded-t-lg border border-gray-200 bg-white px-4 py-2 dark:border-gray-700 dark:bg-gray-800">
+            <label htmlFor="comment" className="sr-only">
+              نظر شما
+            </label>
+            <textarea
+              id="comment"
+              rows={6}
+              className="w-full border-0 bg-transparent px-0 text-sm text-gray-900 focus:outline-none focus:ring-0 dark:text-gray-100"
+              placeholder="نظر خود را اینجا وارد کنید..."
+              required
+            />
+          </div>
+
+          <div className="nav-course-btn w-20 cursor-pointer rounded-md bg-violet-700 px-5 py-2 text-center text-white transition-colors hover:bg-violet-800">
+            <button type="submit" className="cursor-pointer">
+              ارسال
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <BlogShare />
+
+    </article>
+  )
+}
 
 export default SingleBlogTheme
