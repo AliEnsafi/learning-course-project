@@ -20,6 +20,7 @@ export interface CourseItemsProps {
   time?: string
   pricedisplay?: string
   slug: string
+  price?: number
   priceRaw?: number
   created_at?: string
 }

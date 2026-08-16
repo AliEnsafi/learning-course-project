@@ -81,6 +81,12 @@ const LoginTheme : React.FC = () => {
                     </div>
                     </div>
 
+                    {
+                        formik.status && (
+                            <p className="text-red-500 text-sm text-center">{formik.status}</p>
+                        )
+                    }
+
                     <div>
                         <button type="submit" disabled={formik.isSubmitting} className="flex w-full justify-center rounded-md bg-violet-600 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-violet-800 transition-colors cursor-pointer">
                         { formik.isSubmitting ? "در حال انجام" : " ورود " }

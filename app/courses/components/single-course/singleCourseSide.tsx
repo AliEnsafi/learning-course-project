@@ -2,10 +2,18 @@ import Image from "next/image"
 
 import { FaUser , FaSignal , FaClock , FaAward , FaBookReader , FaRegQuestionCircle } from "react-icons/fa"
 
+import AddToCartButton from "@/components/cart/AddToCartButton"
+import PersianNumber from "@/components/persianNumber"
+
 
 const SingleCourseSide = (props : any) => {
 
-    const {key , imageUrl , author , price , time , level } = props
+    const {key , id, title, slug, imageUrl , author , price , priceRaw, time , level } = props
+
+    const numericPrice =
+      typeof priceRaw === "number"
+        ? priceRaw
+        : Number(String(price ?? "").replace(/[^\d]/g, "")) || 0
 
     return(
         <>
@@ -18,12 +26,18 @@ const SingleCourseSide = (props : any) => {
                     <Image src={imageUrl} alt={price} width={300} height={180} />
                 </div>
                 <div className="font-semibold text-violet-700 dark:text-violet-400 text-center">
-                    {price}
+                    <PersianNumber>{price}</PersianNumber>
                 </div>
                 <div className="courseside-btn">
-                    <button className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors cursor-pointer">
-                         خرید
-                    </button>
+                    <AddToCartButton
+                      course={{
+                        id: String(id),
+                        slug,
+                        title,
+                        price: numericPrice,
+                        priceDisplay: price ?? "",
+                      }}
+                    />
                 </div>
             </div>
             <div className="courseside-desc text-violet-950 dark:text-violet-200 space-y-5">

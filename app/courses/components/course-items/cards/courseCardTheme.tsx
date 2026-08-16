@@ -1,9 +1,9 @@
 import React from "react";
 
-import { courseCard } from "./data";
+import AddToCartButton from "@/components/cart/AddToCartButton";
 import PersianNumber from "@/components/persianNumber";
 
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 import { FaUser, FaRegClock } from "react-icons/fa";
 import Link from "next/link";
@@ -11,12 +11,17 @@ import Link from "next/link";
 
 const CourseCardTheme = (props : any) => {
 
-    const {  imageUrl , title , author , time , price , slug } = props
+    const { id, imageUrl , title , author , time , price , priceRaw, slug } = props
+
+    const numericPrice =
+      typeof priceRaw === "number"
+        ? priceRaw
+        : Number(String(price ?? "").replace(/[^\d]/g, "")) || 0
 
 
   return (
     <>
-      <article className="border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-md shadow-sm dark:shadow-gray-800 m-2 text-sm cursor-pointer">
+      <article className="border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-900 rounded-md shadow-sm dark:shadow-gray-800 m-2 text-sm">
 
         <Link href={`/courses/${slug}`}>
           <Image src={imageUrl} alt="aspNET" className="w-full" width={500} height={300} />
@@ -51,6 +56,18 @@ const CourseCardTheme = (props : any) => {
 
           </footer>
         </Link>
+
+        <div className="px-3 pb-3">
+          <AddToCartButton
+            course={{
+              id: String(id),
+              slug,
+              title,
+              price: numericPrice,
+              priceDisplay: price ?? "",
+            }}
+          />
+        </div>
       </article>
     </>
 

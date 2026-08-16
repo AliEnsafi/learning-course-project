@@ -1,7 +1,10 @@
+"use client"
+
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { useRouter } from 'next/navigation';
 
-
+import { supabase } from '@/lib/supabase';
 
 const validationSchema = Yup.object().shape({
 
@@ -11,50 +14,54 @@ const validationSchema = Yup.object().shape({
                   .matches(/\d/, "رمز عبور باید شامل حداقل یک عدد باشد")
                   .matches(/[@$!%*?&#^()_\-+=<>]/, "رمز عبور باید شامل حداقل یک علامت باشد"),
 
-    confirmPassword: Yup.string().oneOf([Yup.ref('password')] , "مقدار وارد شده با رمز عبور مطابقت ندارد")
+    confirmPassword: Yup.string().oneOf([Yup.ref('password')], "مقدار وارد شده با رمز عبور مطابقت ندارد")
                         .required("لطفا مجدداً رمز عبور را وارد کنید")
 
 })
 
-
 export type RegisterValues = {
-
     email: string,
     password: string,
     confirmPassword: string
 }
 
-const initialValues : RegisterValues = {
-
+const initialValues: RegisterValues = {
     email: "",
     password: "",
     confirmPassword: ""
-  }
-
+}
 
 export const useContactRegister = () => {
+  const router = useRouter()
 
   const formik = useFormik<RegisterValues>({
+    initialValues,
+    validationSchema,
 
-    initialValues: initialValues,
-    validationSchema: validationSchema,
+    onSubmit: async (values, { setStatus, setSubmitting, resetForm }) => {
+      setStatus(undefined)
 
-    onSubmit:() => {
+      const { error } = await supabase.auth.signUp({
+        email: values.email,
+        password: values.password,
+      })
 
-      try {
-        formik.resetForm()
-        console.log("success")
+      if (error) {
+        setStatus({ type: "error", message: error.message })
+        setSubmitting(false)
+        return
       }
 
-      catch (error) {
-        console.error("Submission error:", error)
-      }
-
+      resetForm()
+      setStatus({
+        type: "success",
+        message: "ثبت‌نام با موفقیت انجام شد. لطفاً ایمیل خود را برای تأیید حساب بررسی کنید.",
+      })
+      setSubmitting(false)
     },
   })
 
   return {
     formik
   }
-
 }

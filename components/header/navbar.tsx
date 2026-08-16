@@ -10,6 +10,7 @@ import navImage from "./../../public/Images/academy-logo-mark-light.png"
 import Link from "next/link"
 import NavbarLinks from "./navbarLinks"
 import HambergerBtn from "./hambegerBtn"
+import CartIcon from "@/components/cart/CartIcon"
 import { ThemeToggle } from "@/components/theme/ThemeToggle"
 
 
@@ -67,13 +68,17 @@ const Navbar: React.FC = (props) => {
             <div className="nav-img cursor-pointer z-50">
               <Image src={navImage} alt="navImage" width={48} height={40} />
             </div>
-            <div className="block lg:hidden mt-1.5 z-50"> <ThemeToggle /></div>
+            <div className="z-50 mt-1.5 flex items-center gap-1 lg:hidden">
+              <CartIcon />
+              <ThemeToggle />
+            </div>
           </div>
 
           <NavbarLinks isOpen={isOpen} />
         </div>
 
         <div className="hidden lg:flex items-center gap-3">
+          <CartIcon />
           <div className="nav-course-btn flex space-x-1 text-white bg-violet-700 px-5 py-2 rounded-md hover:bg-violet-800 transition-colors cursor-pointer">
             <FaRegFile className="mt-1" />
             <Link href='/blogs' className="cursor-pointer">دوره های ما</Link>

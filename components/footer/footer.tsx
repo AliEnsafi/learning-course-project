@@ -11,7 +11,7 @@ const Footer : React.FC = () => {
         <>
         <section className="footer border-t border-gray-200 dark:border-gray-800 pt-10 pb-6">
 
-            <div className="container space-y-10 lg:flex lg:justify-center lg:space-x-48">
+            <div className="container px-4 sm:px-6 lg:px-8 space-y-10 lg:flex lg:justify-center lg:space-x-48">
 
                 <Description />
 

@@ -105,6 +105,14 @@ const RegisterTheme = () => {
                         </div>
                     </div>
 
+                    {
+                        formik.status && (
+                            <p className={`text-sm text-center ${formik.status.type === "success" ? "text-green-600" : "text-red-500"}`}>
+                                {formik.status.message}
+                            </p>
+                        )
+                    }
+
                     <div>
                         <button type="submit" className="flex w-full justify-center rounded-md bg-violet-600 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-violet-800 transition-colors cursor-pointer">ثبت نام</button>
                     </div>

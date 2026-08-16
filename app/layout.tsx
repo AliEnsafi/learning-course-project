@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import Script from "next/script";
 
 import "./globals.css";
+import { CartProvider } from "@/context/CartContext";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 
 const vazirFont = localFont({
@@ -43,7 +44,9 @@ export default function RootLayout({
       </head>
 
       <body className="min-h-full flex flex-col">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <CartProvider>{children}</CartProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

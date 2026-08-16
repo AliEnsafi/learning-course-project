@@ -82,11 +82,13 @@ const CourseItems = () => {
               filteredCourses.map((item) => (
                 <CourseCardTheme
                   key={item.id}
+                  id={item.id}
                   title={item.title}
                   imageUrl={item.imageUrl}
                   author={item.author}
                   time={item.time}
                   price={item.pricedisplay}
+                  priceRaw={item.price ?? item.priceRaw}
                   slug={item.slug}
                 />
               ))

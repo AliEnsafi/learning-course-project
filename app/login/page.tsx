@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Suspense } from "react"
 import LoginTheme from "./components/loginTheme"
 
 const LoginPage : React.FC = () => {
@@ -8,7 +8,9 @@ const LoginPage : React.FC = () => {
 
         <div className="min-h-full min-w-full flex justify-center content-center">
 
-            <LoginTheme />
+            <Suspense fallback={null}>
+                <LoginTheme />
+            </Suspense>
         </div>
 
         </>
