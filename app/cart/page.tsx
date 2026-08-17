@@ -33,14 +33,14 @@ export default function CartPage() {
   return (
     <>
       <Navbar />
-      <div className="mx-auto grid max-w-5xl gap-10 px-4 py-24 lg:grid-cols-3">
-        <ul className="space-y-3 lg:col-span-2">
+      <div className="mx-auto grid w-md lg:w-4xl gap-10 px-4 py-24 lg:grid-cols-5">
+        <ul className="space-y-3 lg:col-span-3">
           {items.map((item) => (
             <CartItemRow key={item.id} item={item} onRemove={removeItem} />
           ))}
         </ul>
 
-        <div className="lg:col-span-1">
+        <div className="lg:col-span-2">
           <CartSummary totalPrice={totalPrice} itemCount={items.length} />
         </div>
       </div>

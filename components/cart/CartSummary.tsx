@@ -21,11 +21,10 @@ export default function CartSummary({
         </span>
       </div>
 
-      {/* TODO: wire up the real payment gateway in the next phase */}
       <button
         type="button"
         disabled={itemCount === 0}
-        className="mt-4 w-full rounded-md bg-violet-700 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-violet-800 disabled:cursor-not-allowed disabled:opacity-50"
+        className="mt-4 w-full rounded-md bg-violet-700 px-4 py-2.5 cursor-pointer text-sm font-medium text-white transition-colors hover:bg-violet-800 disabled:cursor-not-allowed disabled:opacity-50"
       >
         ادامه فرایند پرداخت
       </button>

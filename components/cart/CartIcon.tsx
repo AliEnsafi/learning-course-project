@@ -17,7 +17,7 @@ export default function CartIcon() {
     >
       <FaShoppingCart className="h-5 w-5" aria-hidden="true" />
       {items.length > 0 ? (
-        <span className="absolute -top-1 -end-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-violet-600 px-1 text-[10px] font-bold text-white">
+        <span className="absolute -top-1 flex h-5 min-w-5 items-center justify-center rounded-full bg-violet-600 px-1 text-[10px] font-bold text-white">
           <PersianNumber>{items.length}</PersianNumber>
         </span>
       ) : null}
