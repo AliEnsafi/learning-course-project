@@ -48,8 +48,8 @@ const CourseItems = () => {
 
 
         let matchesPrice = true
-        if (filter === "free") matchesPrice = (course.priceRaw ?? 0) > 0
-        if (filter === "paid") matchesPrice = (course.priceRaw ?? 0) > 0
+        if (filter === "free") matchesPrice = (course.price ?? 0) === 0
+        if (filter === "paid") matchesPrice = (course.price ?? 0) > 0
 
       return matchesSearch && matchesPrice
     })

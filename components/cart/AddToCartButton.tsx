@@ -46,7 +46,7 @@ export default function AddToCartButton({ course }: { course: CartCourse }) {
     <button
       type="button"
       onClick={handleClick}
-      className="flex w-full items-center justify-center gap-2 rounded-md bg-violet-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-violet-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
+      className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-md bg-violet-700 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-violet-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500"
     >
       <FaShoppingCart aria-hidden="true" />
       <span>{justAdded ? "اضافه شد" : "افزودن به سبد خرید"}</span>
